@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Invoice Studio - Advanced Setup Guide</title>
+<style>
+body { font-family: -apple-system, Segoe UI, Arial, sans-serif; line-height: 1.5; color: #111; margin: 36px; }
+h1 { margin: 0 0 8px; }
+h2 { margin-top: 22px; }
+ul { margin-top: 6px; }
+code { background:#f3f4f6; padding:2px 4px; border-radius:4px; }
+a { color: #1d4ed8; }
+.note { background:#f8fafc; border:1px solid #e5e7eb; padding:10px; border-radius:8px; }
+</style>
+</head>
+<body>
+<h1>Invoice Studio - Advanced Setup Guide</h1>
+<p class="note"><strong>Advanced mode is optional.</strong> Basic email sending works without Google OAuth. Advanced mode is only for Drive upload + auto Google Sheets logging.</p>
+
+<h2>1) EmailJS Setup</h2>
+<ul>
+  <li>Free signup: <a href="https://dashboard.emailjs.com/sign-up">https://dashboard.emailjs.com/sign-up</a></li>
+  <li>Public Key: <a href="https://dashboard.emailjs.com/admin/account">https://dashboard.emailjs.com/admin/account</a></li>
+  <li>Service ID: <a href="https://dashboard.emailjs.com/admin">https://dashboard.emailjs.com/admin</a></li>
+  <li>Template ID: <a href="https://dashboard.emailjs.com/admin/templates">https://dashboard.emailjs.com/admin/templates</a></li>
+  <li>YouTube (EmailJS): <a href="https://www.youtube.com/results?search_query=emailjs+setup+tutorial">https://www.youtube.com/results?search_query=emailjs+setup+tutorial</a></li>
+</ul>
+
+<h2>2) Google OAuth (Advanced Optional)</h2>
+<ul>
+  <li>Google Cloud Credentials: <a href="https://console.cloud.google.com/apis/credentials">https://console.cloud.google.com/apis/credentials</a></li>
+  <li>Enable APIs: Google Drive API and Google Sheets API</li>
+  <li>Create OAuth Client ID (Web application)</li>
+  <li>Authorized JavaScript origins:</li>
+</ul>
+<ul>
+  <li><code>http://127.0.0.1:5500</code></li>
+  <li><code>http://localhost:5500</code></li>
+</ul>
+<ul>
+  <li>YouTube (Google Auth): <a href="https://youtube.com/shorts/WABhO9KsOpU?si=CquIKKTmJXUtGLi-">https://youtube.com/shorts/WABhO9KsOpU?si=CquIKKTmJXUtGLi-</a></li>
+</ul>
+
+<h2>3) In-App Advanced Testing</h2>
+<ul>
+  <li>Open <strong>Email send setup (EmailJS)</strong></li>
+  <li>Paste your Google OAuth Client ID</li>
+  <li>Use <strong>TEST UPLOAD (testing only)</strong> to drop files</li>
+  <li>Click <strong>Send Test Email</strong></li>
+</ul>
+
+<h2>4) Live Send Behavior</h2>
+<ul>
+  <li><strong>Send Invoice</strong> uploads task attachments to Drive (if advanced is configured)</li>
+  <li>App logs each live transaction to one Google Sheet automatically</li>
+  <li>If advanced is not configured, email still sends, but Drive/Sheets features are skipped</li>
+</ul>
+
+<p>Support: contact seller.</p>
+</body>
+</html>
